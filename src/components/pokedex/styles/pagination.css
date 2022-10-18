@@ -4,19 +4,19 @@
     width: max-content;
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 5px;
 }
 
 .pagination__container {
     display: flex;
-    gap: 10px;
+    gap: 5px;
 }
 
 
 
 .pagination__page,.pagination__prev,
 .pagination__next {
-    width: 35px;
+    width: 30px;
     aspect-ratio: 1;
     display: flex;
     justify-content: center;

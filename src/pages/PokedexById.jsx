@@ -1,11 +1,12 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
-import { useParams } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom'
 import { Header } from '../components/shared/Header'
 import Pokemon404 from '../components/pokedexId/Pokemon404'
 import './styles/pokedexById.css'
 import Pokeball from '../components/pokedexId/Pokeball'
 import Line from '../components/pokedexId/Line'
+import img from '../assets/pokedexbyid/flecha-hacia-arriba.png'
 
 const PokedexById = () => {
 
@@ -29,12 +30,20 @@ const PokedexById = () => {
 
   const colorType = pokemon?.types[0].type.name
 
+const navigate= useNavigate()
+
+  const handleBack=e=>{
+    e.preventDefault()  
+    navigate('/pokedex')  
+  }
+
   return (
     <article className='byid' >
       <header>
         <Header />
         <img className='pokedexred__img' src='/images/pokedex/pokedexred.jpg' alt='pokedex' />
       </header>
+        <img onClick={handleBack} className='byid__main-img'  src={img} alt="" />
       <main className='byid__main' >
         <section className='byid__section-1' >
           <div className={`byid__container-img bg-${colorType} `}  >
@@ -69,7 +78,7 @@ const PokedexById = () => {
             </ul>
           </div>
           <div className='byid__section1-container' >
-            <h3>Stats</h3>
+            <h3 className='titles' >Stats</h3>
             <Line />
             <Pokeball />
           </div>
@@ -83,7 +92,7 @@ const PokedexById = () => {
                       <p>{`${stat.base_stat}/150`}</p>
                     </div>
                     <li className="progress">
-                      <div className="progress-bar" style={{ width: `${stat.base_stat}%` }}></div>
+                      <div className="progress-bar" style={{ width: `${stat.base_stat*100/150}%` }}></div>
                     </li>
                   </>
                 ))
@@ -93,7 +102,7 @@ const PokedexById = () => {
         </section>
         <section className='byid__section-2' >
           <div className='byid__section2-container' >
-            <h3 className='byid__move' >Movements</h3>
+            <h3 className='byid__move titles ' >Movements</h3>
             <Line />
             <Pokeball />
           </div>

@@ -151,6 +151,11 @@
 }
 
 /* Background Colors */
+
+.bg-flying {
+    background: linear-gradient(178.92deg, #a8c8c8 0.92%, #bcd2c8 47.96%, #cbd0c0 99.08%);
+}
+
 .bg-grass {
     background: linear-gradient(178.92deg, #7EC6C5 0.92%, #ABDAC6 47.96%, #CAE099 99.08%);
 }

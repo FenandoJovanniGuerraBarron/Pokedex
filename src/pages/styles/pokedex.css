@@ -1,5 +1,5 @@
 .pokedex__container{
-    width: 100vw;
+   width: 100%;
 }
 
 .pokedex__span{
@@ -7,9 +7,9 @@
     font-weight: 700;
 }
 
-.hedaer{
+.header{
+    width: 100%;
     position: relative;
-    min-width: 100vw;
 }
 
 .pokedexred__img{
@@ -19,8 +19,8 @@
         left: 20px;
     }
     
-    .card-container{
-        width: 100vw;
+.card-container{
+        width: 100%;
         display:flex;
         flex-wrap: wrap;
         gap: 20px;
@@ -54,7 +54,7 @@
                 left: 20px;
             }
             .card-container{
-                width: 100vw;
+                width: 100%;
                 display:flex;
                 flex-wrap: wrap;
                 gap: 20px;
