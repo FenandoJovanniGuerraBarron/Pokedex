@@ -1,0 +1,19 @@
+.error{
+    background-color: #000000;
+    background-image:url(/images/pokedexbyid/pokemon_404.jpg) ;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    height: 100vh;
+    position: relative;
+}
+
+.error__img{
+    width: 80px;
+    aspect-ratio: 1;
+    transform: rotate(270deg);
+    margin-left: 25px;
+    top: 25px;
+    cursor: pointer;
+    position: absolute;
+}

@@ -24,19 +24,19 @@ const PokedexById = () => {
       })
   }, [])
 
-  if (hasError) {
-    return <Pokemon404 />
-  }
-
+  
   const colorType = pokemon?.types[0].type.name
-
-const navigate= useNavigate()
-
+  
+  const navigate= useNavigate()
+  
   const handleBack=e=>{
     e.preventDefault()  
     navigate('/pokedex')  
   }
 
+  if (hasError) {
+    return <Pokemon404 img={img} />
+  }
   return (
     <article className='byid' >
       <header>
@@ -109,7 +109,7 @@ const navigate= useNavigate()
           <ul className='byid__move-container' >
             {
               pokemon?.moves.map(move => (
-                <li className='move__item' >{move.move.name}</li>
+                <li key={move.move.name} className='move__item' >{move.move.name}</li>
               ))
             }
           </ul>

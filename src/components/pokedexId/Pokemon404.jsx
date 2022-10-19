@@ -1,12 +1,15 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-
-const Pokemon404 = () => {
+import './styles/pokemon404.css'
+const Pokemon404 = ({img}) => {
     return (
         <>
-            <h1>Pokemon not found  </h1>
-            <Link to='/pokedex' >Return to Pokedex</Link>
+        <div className='error' >
+            <Link to='/pokedex' ><img  className='error__img' src={img} alt="Hola" /></Link>
+            <div className='color__white' ></div>
+        </div>
         </>
+    
     )
 }
 
